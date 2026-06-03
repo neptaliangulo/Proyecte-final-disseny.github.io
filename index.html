@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRACTICA FINAL AV2</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- SweetAlert2 -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet" />
+  <!-- Estils propis -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════ NAVBAR ═══ -->
+<nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Navegació principal">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">Proyecto<span>Final</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Obrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#media">Multimèdia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contacte</a></li>
+        <li class="nav-item"><a class="nav-link" href="#social">Xarxes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════ HERO ═════ -->
+<header id="hero" role="banner">
+  <div class="container position-relative" style="z-index:1">
+    <div class="row">
+      <div class="col-lg-7">
+        <span class="hero-tag">Portfolio Multimèdia · M09 AV2</span>
+        <h1 class="hero-title">
+          Proyecte
+          <em>Final</em>
+          Disseny
+        </h1>
+        <a href="#gallery" class="btn-hero">Veure el treball</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-deco" aria-hidden="true"></div>
+</header>
+
+<!-- ═══════════════════════════════════ GALLERY ══ -->
+<section id="gallery" aria-labelledby="gallery-heading">
+  <div class="container">
+    <span class="section-label">Imatges</span>
+    <h2 class="section-title" id="gallery-heading">Galeria d'imatges</h2>
+    <span class="section-divider"></span>
+
+    <!-- ─── CAROUSEL PNG ─────────────────────────────── -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Galeria en carrusel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{css,js,audio,video,img}/casa.png" class="d-block" alt="Casa PNG" />
+        </div>
+        <div class="carousel-item">
+          <img src="{css,js,audio,video,img}/coche.png" class="d-block" alt="Coche PNG" />
+        </div>
+        <div class="carousel-item">
+          <img src="{css,js,audio,video,img}/robot.png" class="d-block" alt="Robot PNG" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev" aria-label="Anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next" aria-label="Següent">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- ─── MOSAIC SVG ──────────────────────────────── -->
+    <div class="mosaic svg-mosaic" role="list" aria-label="Galeria SVG">
+
+      <!-- Casa -->
+      <div class="mosaic-item" role="listitem">
+        <svg viewBox="0 10 200 175">
+          <rect width="200" height="200" fill="skyblue"/>
+          <rect y="150" width="200" height="80" fill="lightgreen"/>
+          <polygon points="40,80 100,30 160,80" fill="peru"/>
+          <rect x="40" y="80" width="120" height="90" fill="lightsalmon"/>
+          <rect x="95" y="135" width="30" height="35" fill="saddlebrown"/>
+          <rect x="50" y="100" width="25" height="25" fill="white"/>
+          <rect x="125" y="100" width="25" height="25" fill="white"/>
+          <circle cx="30" cy="30" r="15" fill="yellow"/>
+          <circle cx="103" cy="153" r="3" fill="yellow"/>
+        </svg>
+        <div class="mosaic-overlay"><span>Casa SVG</span></div>
+      </div>
+
+      <!-- Coche -->
+      <div class="mosaic-item" role="listitem">
+        <svg viewBox="0 0 200 200">
+          <rect width="200" height="200" fill="#f0f0f0"/>
+          <rect x="30" y="90" width="140" height="40" fill="red"/>
+          <rect x="60" y="60" width="80" height="40" fill="red"/>
+          <rect x="68" y="65" width="30" height="22" fill="skyblue"/>
+          <rect x="105" y="65" width="30" height="22" fill="skyblue"/>
+          <rect x="30" y="100" width="10" height="10" fill="yellow"/>
+          <rect x="160" y="100" width="10" height="10" fill="yellow"/>
+          <circle cx="60" cy="130" r="20" fill="black"/>
+          <circle cx="140" cy="130" r="20" fill="black"/>
+          <circle cx="60" cy="130" r="10" fill="grey"/>
+          <circle cx="140" cy="130" r="10" fill="grey"/>
+        </svg>
+        <div class="mosaic-overlay"><span>Coche SVG</span></div>
+      </div>
+
+      <!-- Robot -->
+      <div class="mosaic-item" role="listitem">
+        <svg viewBox="0 0 200 200">
+          <rect width="200" height="200" fill="#f0f0f0"/>
+          <rect x="60" y="40" width="80" height="60" rx="10" fill="darkgray"/>
+          <circle cx="85" cy="65" r="10" fill="lime"/>
+          <circle cx="115" cy="65" r="10" fill="lime"/>
+          <circle cx="85" cy="65" r="6" fill="white"/>
+          <circle cx="115" cy="65" r="6" fill="white"/>
+          <rect x="70" y="110" width="60" height="70" fill="darkgray"/>
+          <rect x="35" y="120" width="35" height="10" fill="darkgray"/>
+          <rect x="130" y="120" width="35" height="10" fill="darkgray"/>
+          <rect x="97.5" y="10" width="5" height="30" fill="darkgray"/>
+          <circle cx="100" cy="15" r="5" fill="red"/>
+          <circle cx="100" cy="130" r="5" fill="red"/>
+          <circle cx="100" cy="150" r="5" fill="lime"/>
+          <circle cx="100" cy="170" r="5" fill="blue"/>
+        </svg>
+        <div class="mosaic-overlay"><span>Robot SVG</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ MEDIA ════ -->
+<section id="media" aria-labelledby="media-heading">
+  <div class="container">
+    <span class="section-label">Vídeo &amp; Àudio</span>
+    <h2 class="section-title" id="media-heading">Reproductors Multimèdia</h2>
+    <span class="section-divider"></span>
+
+    <div class="row g-4">
+
+      <!-- VIDEO -->
+      <div class="col-lg-7">
+        <article class="media-card">
+          <h5><i class="bi bi-play-circle-fill"></i> Reproductor de Vídeo</h5>
+          <video
+            controls
+            preload="metadata"
+            style="width:100%; display:block;"
+            aria-label="Vídeo de demostració"
+          >
+            <source src="{css,js,audio,video,img}/Sin título (online-video-cutter.com).mp4" type="video/mp4" />
+            <p style="color:#bbb; font-size:0.85rem;">
+              El teu navegador no suporta &lt;video&gt;.
+            </p>
+          </video>
+          <p class="media-meta">
+            <i class="bi bi-info-circle"></i>
+            Format: <strong>MP4</strong> · Còdec: H.264 · Contenidor: MPEG-4
+          </p>
+        </article>
+      </div>
+
+      <!-- AUDIO -->
+      <div class="col-lg-5">
+        <article class="media-card h-100">
+          <h5><i class="bi bi-music-note-beamed"></i> Reproductors d'Àudio</h5>
+          <div class="audio-wrapper">
+
+            <!-- MP3 -->
+            <div class="audio-track">
+              <div class="audio-track-header">
+                <span class="audio-track-title"><i class="bi bi-volume-up"></i> Pista 01</span>
+                <span class="audio-format-badge">MP3</span>
+              </div>
+              <p class="audio-format-info">
+                Format: <strong>MP3</strong> (MPEG Audio Layer III) · 128 kbps · Compressió amb pèrdua
+              </p>
+              <audio controls preload="metadata" aria-label="Pista MP3">
+                <source src="{css,js,audio,video,img}/audio_mp3_128.mp3" type="audio/mpeg" />
+                El teu navegador no suporta &lt;audio&gt;.
+              </audio>
+            </div>
+
+            <!-- OGG -->
+            <div class="audio-track">
+              <div class="audio-track-header">
+                <span class="audio-track-title"><i class="bi bi-volume-up"></i> Pista 02</span>
+                <span class="audio-format-badge ogg">OGG</span>
+              </div>
+              <p class="audio-format-info">
+                Format: <strong>OGG Vorbis</strong> · Codi obert i lliure de patents · Compressió amb pèrdua
+              </p>
+              <audio controls preload="metadata" aria-label="Pista OGG">
+                <source src="{css,js,audio,video,img}/audio.ogg" type="audio/ogg" />
+                El teu navegador no suporta &lt;audio&gt;.
+              </audio>
+            </div>
+
+            <!-- FLAC -->
+            <div class="audio-track">
+              <div class="audio-track-header">
+                <span class="audio-track-title"><i class="bi bi-volume-up"></i> Pista 03</span>
+                <span class="audio-format-badge flac">FLAC</span>
+              </div>
+              <p class="audio-format-info">
+                Format: <strong>FLAC</strong> (Free Lossless Audio Codec) · Compressió <em>sense pèrdua</em> · Màxima qualitat
+              </p>
+              <audio controls preload="metadata" aria-label="Pista FLAC">
+                <source src="{css,js,audio,video,img}/audio.flac" type="audio/flac" />
+                El teu navegador no suporta &lt;audio&gt;.
+              </audio>
+            </div>
+
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ CONTACT ══ -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <span class="section-label">Parla amb mi</span>
+        <h2 class="section-title" id="contact-heading">Contacte</h2>
+        <span class="section-divider"></span>
+        <address class="contact-info" style="font-style:normal;">
+          <p><i class="bi bi-envelope-fill"></i> neptali.marvin@estudiant.fjaverianas.com</p>
+          <p><i class="bi bi-telephone-fill"></i> +34 XX XXX XX XX</p>
+          <p><i class="bi bi-geo-alt-fill"></i> Barcelona, Catalunya</p>
+
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <form id="contactForm" class="contact-form" novalidate aria-label="Formulari de contacte">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="contactName">Nom complet *</label>
+              <input type="text" id="contactName" name="name" placeholder="El teu nom" required aria-required="true" />
+            </div>
+            <div class="col-sm-6">
+              <label for="contactEmail">Correu electrònic *</label>
+              <input type="email" id="contactEmail" name="email" placeholder="correu@exemple.com" required aria-required="true" />
+            </div>
+          </div>
+          <label for="contactSubject">Assumpte *</label>
+          <select id="contactSubject" name="subject" required aria-required="true">
+            <option value="" disabled selected>Selecciona un assumpte…</option>
+            <option value="projecte">Projecte web</option>
+            <option value="multimèdia">Contingut multimèdia</option>
+            <option value="col·laboració">Col·laboració</option>
+            <option value="altre">Altre</option>
+          </select>
+          <label for="contactMessage">Missatge *</label>
+          <textarea id="contactMessage" name="message" placeholder="Explica'm el teu projecte o consulta…" required aria-required="true"></textarea>
+          <button type="submit" class="btn-submit">
+            <i class="bi bi-send-fill"></i>&nbsp; Enviar missatge
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ SOCIAL ═══ -->
+<section id="social" aria-labelledby="social-heading">
+  <div class="container text-center">
+    <span class="section-label">Segueix-me</span>
+    <h2 class="section-title" id="social-heading" style="margin-bottom:0.5rem;">Xarxes socials</h2>
+    <span class="section-divider" style="margin:1rem auto 2.5rem;"></span>
+    <p style="color:var(--muted); max-width:480px; margin:0 auto 2.5rem; font-size:0.95rem; line-height:1.8;">
+
+    </p>
+    <div>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+        <i class="bi bi-github"></i> GitHub
+      </a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter/X">
+        <i class="bi bi-twitter-x"></i> Twitter / X
+      </a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+        <i class="bi bi-instagram"></i> Instagram
+      </a>
+      <a href="https://behance.net/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Behance">
+        <i class="bi bi-behance"></i> Behance
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FOOTER ═══ -->
+<footer role="contentinfo">
+  <div class="footer-logo">Media<span>Folio</span></div>
+  <p style="margin-bottom:0.4rem;">
+    CFGS Desenvolupament d'Aplicacions Web · Mòdul M09 · ETP Xavier
+  </p>
+  <p>
+    Pràctica AV2 · Curs 2025–2026 ·
+    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-github"></i> Repositori GitHub
+    </a>
+  </p>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- JavaScript propi -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
